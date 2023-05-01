@@ -9,6 +9,7 @@ this project allow you to control your ESP32 RGB Led from a web server. (Local o
 * [How to use](#how-to-use)
     - [Local Server](#local-server)
     - [External Server](#external-server)
+* [Hardware](#hardware)
 * [Flashing](#flashing)
   - ESP32
   - ESP8266
@@ -107,6 +108,20 @@ const char* ssid = "********";
 const char* password = "********";
 ```
 
+<hr>
+
+## Hardware
+
+You can use any ESP32 or ESP8266 board. In this project we have used the following boards:
+* ESP32 DEVKIT V1
+* ESP8266 NodeMCU V3
+
+The RGB Led is connected to the following pins:
+* Red: GPIO 19
+* Green: GPIO 18
+* Blue: GPIO 4
+
+![ESP32 RGB Led](./docs/hardware.png)
 
 <hr>
 
