@@ -5,14 +5,14 @@ this project allow you to control your ESP32 RGB Led from a web server. (Local o
 
 ## Index
 
-* (Installation)[#installation]
-* (How to use)[#how-to-use]
-    - (Local Server)[#local-server]
-    - (External Server)[#external-server]
-* (Flashing)[#flashing]
+* [Installation](#installation)
+* [How to use](#how-to-use)
+    - [Local Server](#local-server)
+    - [External Server](#external-server)
+* [Flashing](#flashing)
   - ESP32
   - ESP8266
-* (License)[#license]
+* [License](#license)
 
 <hr>
 
