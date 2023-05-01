@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB Remote Control - ZLL</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        input {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Range input from 0 to 255 -->
+    <input type="range" min="0" max="255" value="0" id="red">
+    <input type="range" min="0" max="255" value="0" id="green">
+    <input type="range" min="0" max="255" value="0" id="blue">
+
+    <script>
+        // Get the range inputs
+        const red = document.getElementById('red');
+        const green = document.getElementById('green');
+        const blue = document.getElementById('blue');
+
+        let arr = [red, green, blue];
+        let arr_name = ['r', 'g', 'b'];
+
+        let ip = '192.168.0.104';
+
+        // When any range move send GET request to IP
+        function updateBG() {
+            document.body.style.backgroundColor = `rgb(${red.value}, ${green.value}, ${blue.value})`;
+        }
+
+        for (let i = 0; i < arr.length; i++) {
+            arr[i].addEventListener('input', () => {
+                fetch(`http://${ip}/${arr_name[i]}/?range=${arr[i].value}`);
+                updateBG();
+            });
+        }
+
+
+        // Set color
+        updateBG();
+    </script>
+</body>
+</html>
