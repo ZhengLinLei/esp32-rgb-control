@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "author": "Zheng Lin Lei",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": -62.5, "left": -53, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 4.25,
+      "left": 113.8,
+      "rotate": 180,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 13.85,
+      "left": 113.8,
+      "rotate": 180,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 23.45,
+      "left": 113.8,
+      "rotate": 180,
+      "attrs": { "value": "220" }
+    },
+    { "type": "wokwi-rgb-led", "id": "rgb1", "top": -34.4, "left": 193.1, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "r1:2", "esp:D19", "green", [ "h0" ] ],
+    [ "r2:2", "esp:D18", "green", [ "v0" ] ],
+    [ "r3:2", "esp:D4", "green", [ "v0" ] ],
+    [ "rgb1:R", "r1:1", "green", [ "v0" ] ],
+    [ "rgb1:G", "r2:1", "green", [ "v0" ] ],
+    [ "rgb1:B", "r3:1", "green", [ "v0" ] ],
+    [ "rgb1:COM", "esp:3V3", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
