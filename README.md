@@ -7,7 +7,7 @@ this project allow you to control your ESP32 RGB Led from a web server. (Local o
 
 Access to the Wokwi simulation: [https://wokwi.com/projects/363603047301474305](https://wokwi.com/projects/363603047301474305)
 
-Start the project and go to [https://led.ueuo.com](https://led.ueuo.com) to control the RGB Led.
+Start the project and go to [http://led.ueuo.com](http://led.ueuo.com) to control the RGB Led.
 
 ![Wokwi](./docs/wokwi.png)
 
