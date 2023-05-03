@@ -84,7 +84,7 @@ updateBG();
 
 ### External Server
 
-If you want to use the RGB Led in your external network, you need to have a server with a static IP address. You can use the server that we have created for this project:[http://led.ueuo.com] (http://led.ueuo.com).
+If you want to use the RGB Led in your external network, you need to have a server with a static IP address. You can use the server that we have created for this project: [http://led.ueuo.com](http://led.ueuo.com).
 
 All the source web server code is inside `/server/` folder:
 * `/index.php` (Home page where you can control the RGB Led)
